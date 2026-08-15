@@ -96,7 +96,7 @@
 
     <div class="card">
 
-        <h1>Good Morning, You ☀️</h1>
+        <h1>Good Morning, Kiddo ☀️</h1>
 
         <p>
             I know you have a test today,
@@ -111,14 +111,28 @@
 
     </div>
 
-    <script>
-        function showMessage() {
-            document.getElementById("message").innerHTML =
-            "Breathe, trust yourself and give it your best. 🍀<br><br>" +
-            "And whatever happens, just remember... " +
-            "I'm always going to be rooting for you. ❤️";
-        }
-    </script>
+<script>
+    function showMessage() {
+
+        // Hide the button
+        document.querySelector("button").style.display = "none";
+
+        // Show the message
+        const message = document.getElementById("message");
+
+        message.innerHTML =
+        "Today is your test day, so no unnecessary stress, okay? 🍀<br><br>" +
+        "So go in there with that quiet brilliance of yours and give it your best. 👑 <br><br>" +
+        "So just a little reminder before your day gets busy - whatever we are, whatever we call this... some things don't really need a name to be real. ❤️<br>" +
+        "I'm always going to be rooting for you 🫶 <br><br>" +
+         "Now go make that test regret being assigned to you 📝 <br><br>"  + 
+        "Good luck, kiddo. Go shine 💛"
+            ;
+
+        // Smooth appearance
+        message.style.animation = "appear 1.5s ease";
+    }
+</script>
 
 </body>
 </html>
