@@ -50,7 +50,20 @@
         button:hover {
             transform: scale(1.05);
         }
+      .highlight-green {
+    color: #5f8f68;
+    font-weight: 600;
+}
 
+.highlight-rose {
+    color: #c75b7a;
+    font-weight: 600;
+}
+
+.highlight-gold {
+    color: #b58a32;
+    font-weight: 600;
+}
         .heart {
             position: absolute;
             font-size: 25px;
@@ -123,13 +136,13 @@
         // Show the message
         const message = document.getElementById("message");
 
-        message.innerHTML =
-            "Today is your test day, so no unnecessary stress, okay? 🍀<br><br>" +
-            "So go in there with that quiet brilliance of yours and give it your best. 👑<br><br>" +
-            "Just a little reminder before your day gets busy - whatever we are, whatever we call this... some things don't really need a name to be real. ❤️<br>" +
-            "I'm always going to be rooting for you. 🫶<br><br>" +
-            "Now go make that test regret being assigned to you. 📝<br><br>" +
-            "Good luck, kiddo. Go shine. 💛";
+       message.innerHTML =
+    "Today is your test day, so no unnecessary stress, okay? 🍀<br><br>" +
+    "<span class='highlight-green'>So go in there with that quiet brilliance of yours and give it your best. 👑</span><br><br>" +
+    "<span class='highlight-rose'>Just a little reminder before your day gets busy - whatever we are, whatever we call this... some things don't really need a name to be real. ❤️</span><br>" +
+    "<span class='highlight-green'>I'm always going to be rooting for you. 🫶</span><br><br>" +
+    "Now go make that test regret being assigned to you. 📝<br><br>" +
+    "<span class='highlight-gold'>Good luck, kiddo. Go shine. 💛</span>";
 
         // Smooth appearance
         message.style.animation = "appear 1.5s ease";
