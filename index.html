@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Little Something For You ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffd6e7, #fff1f7);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.85);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            max-width: 500px;
+            margin: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            animation: appear 1.5s ease;
+        }
+
+        h1 {
+            color: #e75480;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        button {
+            border: none;
+            background: #e75480;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 25px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            from {
+                bottom: -50px;
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            to {
+                bottom: 110%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heart" style="left:10%; animation-delay:1s;">❤️</div>
+    <div class="heart" style="left:30%; animation-delay:3s;">💗</div>
+    <div class="heart" style="left:70%; animation-delay:2s;">💕</div>
+    <div class="heart" style="left:90%; animation-delay:4s;">❤️</div>
+
+    <div class="card">
+
+        <h1>Good Morning, You ☀️</h1>
+
+        <p>
+            I know you have a test today,
+            so here's a tiny reminder...
+        </p>
+
+        <button onclick="showMessage()">
+            Open this ❤️
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerHTML =
+            "Breathe, trust yourself and give it your best. 🍀<br><br>" +
+            "And whatever happens, just remember... " +
+            "I'm always going to be rooting for you. ❤️";
+        }
+    </script>
+
+</body>
+</html>
