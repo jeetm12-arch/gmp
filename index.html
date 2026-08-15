@@ -38,7 +38,7 @@
 
         button {
             border: none;
-            background: #e75480;
+            background: #9fd8a3;
             color: white;
             padding: 14px 25px;
             border-radius: 30px;
@@ -96,15 +96,14 @@
 
     <div class="card">
 
-        <h1>Good Morning, Kiddo ☀️</h1>
+       <h1 id="greeting">Good Morning, Kiddo ☀️</h1>
 
-        <p>
-            I know you have a test today,
-            so here's a tiny reminder...
-        </p>
+<p id="intro">
+    I know you have a test today, so here's a tiny reminder...
+</p>
 
         <button onclick="showMessage()">
-            Open this ❤️
+            Open me ❤️
         </button>
 
         <p id="message"></p>
@@ -117,17 +116,20 @@
         // Hide the button
         document.querySelector("button").style.display = "none";
 
+        // Hide greeting and introduction
+        document.getElementById("greeting").style.display = "none";
+        document.getElementById("intro").style.display = "none";
+
         // Show the message
         const message = document.getElementById("message");
 
         message.innerHTML =
-        "Today is your test day, so no unnecessary stress, okay? 🍀<br><br>" +
-        "So go in there with that quiet brilliance of yours and give it your best. 👑 <br><br>" +
-        "So just a little reminder before your day gets busy - whatever we are, whatever we call this... some things don't really need a name to be real. ❤️<br>" +
-        "I'm always going to be rooting for you 🫶 <br><br>" +
-         "Now go make that test regret being assigned to you 📝 <br><br>"  + 
-        "Good luck, kiddo. Go shine 💛"
-            ;
+            "Today is your test day, so no unnecessary stress, okay? 🍀<br><br>" +
+            "So go in there with that quiet brilliance of yours and give it your best. 👑<br><br>" +
+            "Just a little reminder before your day gets busy - whatever we are, whatever we call this... some things don't really need a name to be real. ❤️<br>" +
+            "I'm always going to be rooting for you. 🫶<br><br>" +
+            "Now go make that test regret being assigned to you. 📝<br><br>" +
+            "Good luck, kiddo. Go shine. 💛";
 
         // Smooth appearance
         message.style.animation = "appear 1.5s ease";
